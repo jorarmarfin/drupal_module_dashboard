@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_theme().
+ */
+function drinux_dashboard_theme($existing, $type, $theme, $path) {
+    return [
+        'dashboard' => [
+            'variables' => [],
+            'template' => 'dashboard',
+        ],
+    ];
+}

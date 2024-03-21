@@ -1,0 +1,7 @@
+name: 'Drinux Dashboard'
+type: module
+description: 'A custom module for displaying a dashboard with ApexCharts.'
+core_version_requirement: ^10
+package: Drinux
+version: '1.0.10'
+

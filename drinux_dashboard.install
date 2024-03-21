@@ -1,0 +1,75 @@
+<?php
+/**
+ * Implements hook_schema().
+ */
+function drinux_dashboard_schema(): array
+{
+    $schema['total_por_sexo'] = [
+        'description' => 'Almacena totales por sexo.',
+        'fields' => [
+            'id' => [
+                'description' => 'El ID único para cada registro.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'nombre' => [
+                'description' => 'El nombre del sexo.',
+                'type' => 'varchar',
+                'length' => 255,
+                'not null' => TRUE,
+            ],
+            'cantidad' => [
+                'description' => 'La cantidad de participantes.',
+                'type' => 'int',
+                'not null' => TRUE,
+                'default' => 0,
+            ],
+        ],
+        'primary key' => ['id'],
+    ];
+    $schema['asistencia'] = [
+        'description' => 'Almacena registros de asistencia.',
+        'fields' => [
+            'id' => [
+                'description' => 'ID único para cada registro de asistencia.',
+                'type' => 'serial',
+                'unsigned' => TRUE,
+                'not null' => TRUE,
+            ],
+            'sector' => [
+                'description' => 'El sector asociado a la asistencia.',
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+            'grupo' => [
+                'description' => 'El grupo asociado a la asistencia.',
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+            'actividad' => [
+                'description' => 'La actividad asociada a la asistencia.',
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+            'participante' => [
+                'description' => 'El participante asistente.',
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+            'sexo' => [
+                'description' => 'El sexo de los asistentes.',
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+            'distrito' => [
+                'description' => 'El distrito asociado a la asistencia.',
+                'type' => 'varchar',
+                'length' => 255,
+            ],
+        ],
+        'primary key' => ['id'],
+    ];
+
+    return $schema;
+}

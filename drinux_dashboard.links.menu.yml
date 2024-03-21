@@ -1,0 +1,6 @@
+drinux_dashboard.admin:
+  title: 'Estadísticas'
+  description: 'Ver estadísticas.'
+  parent: system.admin_config
+  route_name: drinux_dashboard.admin
+  weight: 100

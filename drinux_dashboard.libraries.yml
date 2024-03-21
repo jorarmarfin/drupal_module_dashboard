@@ -1,0 +1,9 @@
+apexcharts:
+  js:
+    https://cdn.jsdelivr.net/npm/apexcharts: { type: external, minified: true }
+    js/drinux_dashboard.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings
